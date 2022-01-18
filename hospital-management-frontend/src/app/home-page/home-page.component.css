@@ -1,0 +1,10 @@
+.image{
+    width:100%;
+    height: 430px;
+    border-radius: 5px;
+}
+.heading{
+    background-color: rgb(85, 11, 107);
+    color: snow;
+    border-radius: 5px;
+}

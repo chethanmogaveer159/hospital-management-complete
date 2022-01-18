@@ -1,0 +1,63 @@
+<!--<p>create-patient works!</p>-->
+<div class="container mt-2">
+    <div class="heading ">
+        <h3 class=" text-center p-2">Create Patient</h3>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" [(ngModel)]="patient.name" name="name"
+                    placeholder="Enter Name">
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="age" [(ngModel)]="patient.age" name="age"
+                    placeholder="Enter Age">
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="gender" [(ngModel)]="patient.gender" name="gender"
+                    placeholder="Enter Gender">
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Select Doctor name</label>
+            <div class="col-sm-10">
+                <select class="form-control dropdown-toggle" id="dname" [(ngModel)]="patient.dname" name="dname"
+                    placeholder="Select Doctor">
+                    <option value="">Choose Doctor Name</option>
+                    <option *ngFor="let doctor of doctors">{{doctor.name}} and id is {{doctor.did}} </option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Select Doctor id</label>
+            <div class="col-sm-10">
+                <select class="form-control" id="did" [(ngModel)]="patient.did" name="did"
+                    placeholder="Select Doctor id">
+                    <option value="">Choose Doctor Id</option>
+                    <option *ngFor="let doctor of doctors">{{doctor.did}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Date</label>
+            <div class="col-sm-10">
+                <input type="date" class="form-control" id="date" [(ngModel)]="patient.date" name="date"
+                    placeholder="Enter Specialization">
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <div class="col-sm-10 text-center">
+                <button class="btn btn-success m-2" type="submit">Add Patient</button>
+                <button routerLink="/patients" class="btn btn-warning m-2" type="submit">Back</button>
+            </div>
+        </div>
+    </form>
+</div>

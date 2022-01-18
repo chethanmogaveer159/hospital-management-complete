@@ -1,0 +1,34 @@
+<div class="container mt-2 col-md">
+    <div class="heading mb-2">
+        <h3 class="text-center p-2">Patient List</h3>
+    </div>
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th> Patient Id</th>
+                <th> Name</th>
+                <th> Age</th>
+                <th> Gender </th>
+                <th> Date of Visit</th>
+                <th> Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let patient of patients">
+                <td>{{ patient.pid}}</td>
+                <td>{{ patient.name}}</td>
+                <td>{{ patient.age}}</td>
+                <td>{{ patient.gender}}</td>
+                <td>{{ patient.date| date: 'dd/MM/yyyy'}}</td>
+                <td>
+                    <button (click)="deletePatient(patient.pid)" class="btn btn-danger" style="margin-left: 10px;">
+                        Delete</button>
+                    <button (click)="patientDetails(patient.pid)" class="btn btn-success" style="margin-left: 10px;">
+                        View</button>
+                    <button (click)="updatePatient(patient.pid)" class="btn button" style="margin-left: 10px;">
+                        Update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

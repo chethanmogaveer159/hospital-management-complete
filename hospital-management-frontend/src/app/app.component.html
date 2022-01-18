@@ -1,0 +1,38 @@
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a href="#" class="navbar-brand"><b>Hospital Management</b></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav ms-auto fw-bold">
+                <li class="nav-item">
+                    <a routerLink="home-page" routerLinkActive="active" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="doctors" routerLinkActive="active" class="nav-link">Doctor List</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="create-doctor" routerLinkActive="active" class="nav-link">Add Doctor</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="patients" routerLinkActive="active" class="nav-link">Patient List</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="create-patient" routerLinkActive="active" class="nav-link">Add Patient</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+    <footer class="footer fw-bold ">
+        <div class="container mt-2">
+            <span> &copy; 2022 Copyright: Mindtree.com</span>
+        </div>
+    </footer>
+</body>

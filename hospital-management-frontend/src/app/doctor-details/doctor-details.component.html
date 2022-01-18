@@ -1,0 +1,32 @@
+<div class="container mt-2">
+    <div class="heading mb-2">
+        <h3 class="text-center p-2">Doctor Details</h3>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th> Doctor ID</th>
+                <th> Name</th>
+                <th> Age</th>
+                <th> Gender </th>
+                <th> Specialization</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ doctor.did}}</td>
+                <td>{{ doctor.name}}</td>
+                <td>{{ doctor.age}}</td>
+                <td>{{ doctor.gender}}</td>
+                <td>{{ doctor.specialist}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row justify-content-center ml-5">
+        <div class="col-sm-10 text-center">
+            <button routerLink="/doctors" class="btn btn-warning" type="submit">Back</button>
+        </div>
+    </div>
+</div>

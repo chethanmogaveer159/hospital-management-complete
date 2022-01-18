@@ -1,0 +1,42 @@
+<div class="container mt-2">
+    <div class="heading">
+        <h3 class="text-center p-2">Update Doctor</h3>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" [(ngModel)]="doctor.name" name="name"
+                    placeholder="Enter Name">
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="age" [(ngModel)]="doctor.age" name="age"
+                    placeholder="Enter Age">
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="gender" [(ngModel)]="doctor.gender" name="gender"
+                    placeholder="Enter Gender">
+            </div>
+        </div>
+        <div class="form-group row mb-2">
+            <label class="col-sm-2 col-form-label">Doctor Specialization</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="specialist" [(ngModel)]="doctor.specialist"
+                    name="specialist" placeholder="Enter Specialization">
+            </div>
+        </div>
+        <div class="form-group row justify-content-center">
+            <div class="col-sm-3">
+                <button class="btn btn-success m-2" type="submit">Update Doctor</button>
+                <button routerLink="/doctors" class="btn btn-warning m-2" type="button">Back</button>
+            </div>
+        </div>
+    </form>
+</div>
